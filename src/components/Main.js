@@ -35,19 +35,19 @@ const Main = () => {
 
     return (
         <>
-            <div className="bg-gray-500 flex justify-center gap-5">
-                Width
-                <input type="number" className="border-2 w-10" value={width} onChange={(e) => setWidth(e.target.value)} />
-                Height
-                <input type="number" className="border-2 w-10" value={height} onChange={(e) => setHeight(e.target.value)} />
-                <input type="checkbox" value={isEditing} onChange={(e) => setIsEditing(e.target.checked)} />
-
+            <div className="bg-gray-500 flex h-[10%] w-full absolute justify-center gap-2">
+                <div className="flex flex-row h-8">
+                    <input type="number" className="border-2 w-8 text-center" value={width} onChange={(e) => setWidth(e.target.value)} />
+                    <p className="text-white text-2xl">x</p>
+                    <input type="number" className="border-2 w-8 text-center" value={height} onChange={(e) => setHeight(e.target.value)} />
+                </div>
+                <input type="checkbox" className="w-8 h-8" value={isEditing} onChange={(e) => setIsEditing(e.target.checked)} />
                 {chooseColor ? <div onClick={() => setChooseColor(false)} className={`${color} w-8 h-8 border-2 border-black`}></div> : <div onClick={() => setChooseColor(true)} className={`${color} w-8 h-8 border-2 border-black`}></div>}
 
                 <ColorPicker chooseColor={chooseColor} setColor={setColor} setChooseColor={setChooseColor} />
             </div>
 
-            <div className={`border-t-2 border-b-2 border-red-500 h-[80vh] ${isEditing ? "overflow-scroll" : "overflow-hidden"} w-full`}>
+            <div className={`border-t-2 border-b-2 border-red-500 h-[90%] mt-auto ${isEditing ? "overflow-scroll" : "overflow-hidden"} w-full`}>
                 <div style={{ gridTemplateColumns: `repeat(${width}, minmax(34px, 1fr))` }} className={`grid w-fit mx-auto`}>
                     {createBoxes()}
                 </div>

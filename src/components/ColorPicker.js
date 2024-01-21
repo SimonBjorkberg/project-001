@@ -6,7 +6,7 @@ const ColorPicker = ({ chooseColor, setColor, setChooseColor }) => {
 
 
  return (
-    <div className={`${chooseColor ? "block" : "hidden"} absolute w-fit h-fit border-2 border-black right-2 top-2 grid grid-cols-2 bg-white`}>
+    <div className={`${chooseColor ? "block" : "hidden"} absolute w-fit border-2 border-black right-2 bottom-2 grid grid-cols-2 bg-white`}>
         {colors.map((color) => {
              return <ColorBox color={color} setColor={setColor} setChooseColor={setChooseColor} />
         })}
