@@ -35,7 +35,7 @@ const Main = () => {
 
     return (
         <>
-            <div className="bg-gray-500 flex h-[10%] w-full absolute justify-center gap-2">
+            <div className="bg-gray-500 flex h-[10%] w-full fixed justify-center gap-2">
                 <div className="flex flex-row h-8 my-auto">
                     <input type="number" className="border-2 w-16 text-center" value={width} onChange={(e) => setWidth(e.target.value)} />
                     <p className="text-white text-2xl">x</p>
