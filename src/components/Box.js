@@ -7,6 +7,7 @@ const Box = ({ isEditing, color }) => {
 
     useEffect(() => {
         setCurrentColor(color)
+        // eslint-disable-next-line
     }, [edit])
 
 
