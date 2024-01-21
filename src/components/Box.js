@@ -13,11 +13,9 @@ const Box = ({ isEditing, color }) => {
 
     return (<>
         {isEditing ?
-            <div onClick={() => setEdit(!edit)} className={`w-8 h-8 m-[0.5px] ${edit ? currentColor : "bg-gray-500"}`}>
-
-            </div> : <div className={`w-8 h-8 m-[0.5px] ${edit ? currentColor : "bg-gray-500"}`}>
-
-            </div>
+            <div onClick={() => setEdit(!edit)} className={`w-8 h-8 m-[0.5px] ${edit ? currentColor : "bg-gray-500"}`}></div>
+            :
+            <div className={`w-8 h-8 m-[0.5px] ${edit ? currentColor : "bg-gray-500"}`}></div>
         }
     </>)
 }

@@ -36,13 +36,13 @@ const Main = () => {
     return (
         <>
             <div className="bg-gray-500 flex h-[10%] w-full absolute justify-center gap-2">
-                <div className="flex flex-row h-8">
-                    <input type="number" className="border-2 w-8 text-center" value={width} onChange={(e) => setWidth(e.target.value)} />
+                <div className="flex flex-row h-8 my-auto">
+                    <input type="number" className="border-2 w-16 text-center" value={width} onChange={(e) => setWidth(e.target.value)} />
                     <p className="text-white text-2xl">x</p>
-                    <input type="number" className="border-2 w-8 text-center" value={height} onChange={(e) => setHeight(e.target.value)} />
+                    <input type="number" className="border-2 w-16 text-center" value={height} onChange={(e) => setHeight(e.target.value)} />
                 </div>
-                <input type="checkbox" className="w-8 h-8" value={isEditing} onChange={(e) => setIsEditing(e.target.checked)} />
-                {chooseColor ? <div onClick={() => setChooseColor(false)} className={`${color} w-8 h-8 border-2 border-black`}></div> : <div onClick={() => setChooseColor(true)} className={`${color} w-8 h-8 border-2 border-black`}></div>}
+                <input type="checkbox" className="w-8 h-8 my-auto" value={isEditing} onChange={(e) => setIsEditing(e.target.checked)} />
+                {chooseColor ? <div onClick={() => setChooseColor(false)} className={`${color} w-8 h-8 border-2 border-black my-auto`}></div> : <div onClick={() => setChooseColor(true)} className={`${color} w-8 h-8 border-2 border-black my-auto`}></div>}
 
                 <ColorPicker chooseColor={chooseColor} setColor={setColor} setChooseColor={setChooseColor} />
             </div>
